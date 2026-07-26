@@ -17,7 +17,8 @@ const optimizeDepsArr = [
 export default defineNuxtConfig({
   compatibilityDate: "latest",
   devtools: { enabled: true },
-
+  ssr: false,
+  
   modules: [
     "@nuxt/icon",
     "@nuxt/fonts",
