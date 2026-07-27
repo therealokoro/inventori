@@ -10,7 +10,7 @@ export default defineTask({
       body: {
         email: rc.defaultAdminEmail,
         password: rc.defaultAdminPass,
-        name: rc.defaultAdminName,
+        name: rc.defaultAdminName
       }
     })
 

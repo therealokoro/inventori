@@ -18,14 +18,14 @@ export default defineNuxtConfig({
   compatibilityDate: "latest",
   devtools: { enabled: true },
   ssr: false,
-  
+
   modules: [
     "@nuxt/icon",
     "@nuxt/fonts",
     "@vueuse/nuxt",
     "@nuxthub/core",
     "@formkit/nuxt",
-    "@nuxtjs/color-mode",
+    "@nuxtjs/color-mode"
   ],
 
   hub: {
