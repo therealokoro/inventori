@@ -1,5 +1,5 @@
-<script setup>
-const handleIconClick = (node, e) => {
+<script setup lang="ts">
+const handleIconClick = (node: any, e: any) => {
   node.props.suffixIcon = node.props.suffixIcon === "lucide:eye" ? "lucide:eye-off" : "lucide:eye"
   node.props.type = node.props.type === "password" ? "text" : "password"
 }
