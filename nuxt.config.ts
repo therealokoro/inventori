@@ -25,7 +25,8 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxthub/core",
     "@formkit/nuxt",
-    "@nuxtjs/color-mode"
+    "@nuxtjs/color-mode",
+    "nuxt-toastflow"
   ],
 
   hub: {
@@ -55,8 +56,7 @@ export default defineNuxtConfig({
   imports: {
     imports: [
       { from: "tailwind-variants", name: "tv" },
-      { from: "tailwind-variants", name: "VariantProps", type: true },
-      { from: "vue-sonner", name: "toast", as: "useSonner" }
+      { from: "tailwind-variants", name: "VariantProps", type: true }
     ]
   },
 
@@ -77,5 +77,12 @@ export default defineNuxtConfig({
     provider: "server",
     serverBundle: "local",
     clientBundle: { scan: true, sizeLimitKb: 0 }
+  },
+
+  toastflow: {
+    config: {
+      position: "top-center",
+      duration: 7000
+    }
   }
 })

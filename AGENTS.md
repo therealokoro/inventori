@@ -12,9 +12,9 @@ touching this codebase.
 - Read `package.json`, `nuxt.config.ts`, `app/components/`, `app/components/Ui/` and `app/composables/` — build on
   what's there, don't reinstall or duplicate anything already present, and
   match existing conventions exactly.
-- Unless a specific task says otherwise, do not run commands (`bun install`,
-  `bun run dev`, migrations, `lint`, `fmt`, `test`) — audit by reading files,
-  then write the code correctly the first time. The human runs and verifies.
+- Run whatever commands you need to verify your work — `bun install`,
+  `bun run dev`, migrations, `lint`, `fmt`, `test`. Confirm things actually
+  work rather than assuming they do from reading the code alone.
 - If installed skills or connected MCP tools are available and relevant to
   the task (e.g. a skill for a specific file format, an MCP tool for
   querying a connected service), use them rather than working around them
@@ -31,17 +31,18 @@ how it shapes the architecture.
 
 - Nuxt 4 (SPA mode, `ssr: false`), Vue 3, TypeScript, Bun
 - Tailwind CSS v4 via the native Vite plugin (not the module)
-- UI Thing for components - all of which are already installed and live in `app/components/Ui/`
-- FormKit for forms - project contains a few custom formkit components in `app/components/FormKit/`
+- UI Thing for components
+- FormKit for forms
 - Zod, with validation schemas derived from the database schema via
   `drizzle-zod` rather than hand-written in parallel
 - Drizzle ORM, NuxtHub for hosting/database
-- better-auth, hand-rolled with the Drizzle adapter (not a wrapper module) - see `server/utils/server-auth.ts` and `app/composables/useAuth.ts`
+- better-auth, hand-rolled with the Drizzle adapter (not a wrapper module)
 - rstore for local-first data/caching (offline-critical entities)
 - nuxt-actions for server-side business logic that can assume connectivity
-- nuxt-toastflow for notifications, with fully custom rendering — use shadcn-token and ui-thing components if needed
+- nuxt-toastflow for notifications, with fully custom rendering — never use
+  its default styling
 - VueUse for utilities (e.g. `useOnline()` for connectivity state)
-- oxlint + oxfmt for linting and formatting
+- oxlint + oxfmt for linting and formatting (not ESLint/Prettier)
 - Vitest for tests
 
 ## Conventions
